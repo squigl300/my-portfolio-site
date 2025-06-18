@@ -1,0 +1,35 @@
+/* src/components/ProjectCard.css */
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h2 {
+  margin-top: 0;
+  color: var(--accent-color);
+}
+
+.project-card .description {
+    line-height: 1.6;
+}
+
+.project-card .tech-stack,
+.project-card .relevance {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+}
+
+.project-card strong {
+    color: var(--primary-text);
+}
