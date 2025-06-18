@@ -1,28 +1,74 @@
 // src/pages/Projects.jsx
 import React from 'react';
-import ProjectCard from '../components/ProjectCard'; // Import the component
+import ProjectCard from '../components/ProjectCard'; 
 
 const Projects = () => {
   return (
     <div className="page-container">
       <h1>AI Projects</h1>
-      <p>A selection of my work demonstrating key skills in AI, data analysis, and cloud development. Each project highlights my ability to tackle complex problems and deliver effective solutions.</p>
-
-      <ProjectCard
-        title="AI-Powered Personality Detection Chatbot (Honours Project)"
-        description="Designed and built a conversational AI to detect personality traits (e.g., extroversion, agreeableness) from user text input. The project involved data preprocessing, feature extraction, training multiple machine learning models, and deploying a functional chatbot interface."
-        techStack="Python, Scikit-learn, NLTK, Pandas, Flask"
-        relevance="This project provided deep, hands-on experience with NLP, text classification, and conversational AI design — skills directly applicable to Storm ID's work in automated Case Triage and intelligent Complaints Handling."
-      />
-
-      <ProjectCard
-        title="Machine Learning & Data Analysis"
-        description="[Briefly describe another project from this module. E.g., 'Analyzed a large dataset to predict customer behaviour, employing techniques like logistic regression and decision trees to identify key predictors...']"
-        techStack="[e.g., Python, Pandas, Matplotlib, Scikit-learn]"
-        relevance="[e.g., This aligns with the predictive analytics work Storm ID delivered for the NHS, demonstrating an ability to extract meaningful insights from complex data.]"
-      />
       
-      {/* Add more ProjectCard components for your other key modules */}
+      {/* --- HONOURS PROJECT SHOWCASE --- */}
+      <div className="main-project-showcase">
+        <h2>Honours Project: AI-Powered Personality Detection Chatbot</h2>
+        <p>This project represents the culmination of my undergraduate studies, combining my interests in Natural Language Processing, complex system architecture, and the practical application of AI to understand human nuances.</p>
+        
+        <div className="project-images">
+            <img src="/B.1-High-Level-Architecture.png" alt="High-Level Architecture Diagram" />
+            <img src="/B.2-Component-Interaction.png" alt="Component Interaction Diagram" />
+        </div>
+        <p className="image-caption"><em>Key architecture diagrams from the project report.</em></p>
+
+        <h3>The Challenge: Moving Beyond Static Questionnaires</h3>
+        <p>Traditional personality assessments like the Myers-Briggs Type Indicator (MBTI) are widely used but suffer from well-known limitations. They rely on static, multiple-choice questions that can feel rigid, fail to capture the context of real-life situations, and are vulnerable to response biases.</p>
+        <p>The core problem this project addressed was: <strong>Can a conversational AI provide a richer, more nuanced, and potentially less biased exploration of personality preferences compared to traditional methods?</strong></p>
+
+        <h3>My Solution: A Modular, Privacy-First Conversational AI</h3>
+        <p>I engineered a sophisticated chatbot prototype from the ground up to explore a user's personality through interactive, open-ended dialogue. The system was designed to engage users naturally, ask personalised questions, and handle ambiguity in a way that static forms cannot.</p>
+        <p>A primary technical and ethical consideration was <strong>data privacy</strong>. To ensure all user data remained secure, the entire system was architected to run locally, using the <strong>Ollama</strong> runtime to serve a fine-tuned <strong>Mistral 7B Large Language Model (LLM)</strong> without sending any conversational data to third-party APIs.</p>
+
+        <h3>Key Architectural Features</h3>
+        <ul>
+          <li><strong>Modular Facade-Based Controller:</strong> The system's core was a central controller that orchestrated interactions between distinct, specialised components for state management, question selection, message handling, and response generation.</li>
+          <li><strong>Context-Aware Personalisation:</strong> The chatbot used details from the user's background and recent conversation topics to tailor questions, making the interaction feel more relevant and engaging.</li>
+          <li><strong>Intelligent Ambiguity Handling:</strong> When a user gave a nuanced answer like "it depends," the system detected this and deployed a "tendency probe"—a specific follow-up question to gently ask for their most common leaning.</li>
+          <li><strong>Pragmatic Hybrid AI Model:</strong> In response to the unreliability of the 7B LLM for precise analytical tasks, I re-architected the system to use the LLM for generation while implementing critical scoring logic as a stable and predictable keyword-based heuristic engine in Python.</li>
+          <li><strong>Dual Summary Mechanism:</strong> Upon completion, the chatbot provided two distinct perspectives: a "Controlled Summary" based on the calculated scores and an "Organic Summary" generated by the LLM based on its holistic interpretation of the conversation.</li>
+        </ul>
+        
+        <h3>Tech Stack</h3>
+        <p><strong>Language:</strong> Python | <strong>AI/ML Frameworks:</strong> LangChain, Unsloth | <strong>LLM & Runtime:</strong> Mistral 7B, Ollama | <strong>Frontend:</strong> Streamlit | <strong>Core Libraries:</strong> Pandas, PyTest</p>
+
+        <h3>Key Challenges & Learnings</h3>
+        <p>The journey of building this prototype was a significant learning experience in practical AI engineering. The biggest challenge was the inconsistency of the 7B parameter model for analytical tasks, which led to a critical learning: <strong>knowing when to pivot</strong>. I made the conscious decision to replace the unreliable LLM-based scoring with a deterministic Python-based keyword system. This improved stability immensely and taught me the importance of using the right tool for the job.</p>
+
+        <h3>Relevance to Storm ID</h3>
+        <p>This project aligns directly with Storm ID's focus on applying AI to solve complex, real-world problems. My experience in building a system that understands nuanced human language is applicable to their work in **Case Triage** and **Complaints Handling**. The chatbot's architecture is a foundational concept within **Agentic Workflows**, and my privacy-first, pragmatic approach to development demonstrates the ethical and stable engineering practices valued by Storm ID.</p>
+      </div>
+
+      <hr className="section-divider" />
+
+      {/* --- OTHER KEY PROJECTS --- */}
+      <h2>Other Key Projects</h2>
+      <div className="other-projects">
+        <ProjectCard
+          title="Cloud Platform Development"
+          description="Developed and deployed containerized web applications using Docker. Created CI/CD pipelines to automate testing and deployment, gaining hands-on experience with the infrastructure-as-code principles essential for building robust, scalable systems on cloud platforms like Azure and AWS."
+          techStack="Docker, GitHub Actions (CI/CD), Python, Flask"
+          relevance="This foundational DevOps knowledge is crucial for building and maintaining the secure, enterprise-grade digital services that Storm ID delivers to its public sector clients."
+        />
+        <ProjectCard
+          title="Integrated Group Project: Fitness App"
+          description="Collaborated within a team to build a comprehensive fitness application. My primary role was developing the user-facing dashboard, where I gained practical experience building a modern, responsive user interface using the same front-end technology used at Storm ID."
+          techStack="React, JavaScript, Chart.js, CSS"
+          relevance="Demonstrates direct, hands-on experience with React, showing my ability to contribute to the front-end development of Storm ID's digital products and transformation projects."
+        />
+         <ProjectCard
+          title="Secure Software Development"
+          description="Analyzed software for common security vulnerabilities (e.g., SQL Injection, XSS) and implemented defensive coding practices and mitigation techniques. This project instilled a security-first mindset, essential for developing applications that handle sensitive data."
+          techStack="Python, OWASP Top 10, Static/Dynamic Analysis Tools"
+          relevance="Aligns with Storm ID's ISO 27001 certification and the high-security demands of their public sector and healthcare clients, where protecting user data is paramount."
+        />
+      </div>
 
     </div>
   );

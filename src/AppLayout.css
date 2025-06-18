@@ -19,3 +19,60 @@
     line-height: 1.6;
     color: var(--secondary-text);
 }
+
+/* src/AppLayout.css */
+
+/* --- STYLES FOR THE PROJECTS PAGE --- */
+
+.main-project-showcase {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.main-project-showcase h3 {
+  margin-top: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.main-project-showcase ul {
+  padding-left: 20px;
+}
+
+.main-project-showcase ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.project-images {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.project-images img {
+  width: 50%;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.image-caption {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.section-divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 3rem 0;
+}
+
+.other-projects h2 {
+    margin-bottom: 1rem;
+}
