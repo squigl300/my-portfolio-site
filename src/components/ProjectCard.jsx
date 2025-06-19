@@ -2,9 +2,16 @@
 import React from 'react';
 import './ProjectCard.css';
 
-const ProjectCard = ({ title, description, techStack, relevance }) => {
+// Add 'imageUrl' and 'imageAlt' to the props
+const ProjectCard = ({ title, description, techStack, relevance, imageUrl, imageAlt }) => {
   return (
     <div className="project-card">
+      {/* Conditionally render the image if imageUrl is provided */}
+      {imageUrl && (
+        <div className="card-image-container">
+          <img src={imageUrl} alt={imageAlt || 'Project visual'} className="card-image" />
+        </div>
+      )}
       <h2>{title}</h2>
       <p className="description">{description}</p>
       <div className="tech-stack">

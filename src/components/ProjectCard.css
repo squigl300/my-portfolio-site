@@ -33,3 +33,17 @@
 .project-card strong {
     color: var(--primary-text);
 }
+
+.card-image-container {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 400px; /* Prevent images from being too tall */
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: #f8f9fa;
+}

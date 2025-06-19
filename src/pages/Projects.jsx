@@ -47,29 +47,34 @@ const Projects = () => {
 
       <hr className="section-divider" />
 
-      {/* --- OTHER KEY PROJECTS --- */}
+     {/* --- OTHER KEY PROJECTS --- */}
       <h2>Other Key Projects</h2>
       <div className="other-projects">
         <ProjectCard
-          title="Cloud Platform Development"
-          description="Developed and deployed containerized web applications using Docker. Created CI/CD pipelines to automate testing and deployment, gaining hands-on experience with the infrastructure-as-code principles essential for building robust, scalable systems on cloud platforms like Azure and AWS."
-          techStack="Docker, GitHub Actions (CI/CD), Python, Flask"
-          relevance="This foundational DevOps knowledge is crucial for building and maintaining the secure, enterprise-grade digital services that Storm ID delivers to its public sector clients."
+          title="Machine Learning for Predictive Healthcare"
+          description="Developed and validated a Random Forest classification model to predict the likelihood of a patient having a stroke based on clinical features. The project involved comprehensive data preprocessing, feature engineering (e.g., age-squared transformations, BMI-glucose interactions), and rigorous cross-validation. The final model achieved 91% overall accuracy and an AUC of 0.83."
+          techStack="Python, Pandas, Scikit-learn, Matplotlib"
+          relevance="This project is directly relevant to Storm ID's award-winning work with NHS Scotland. It demonstrates my ability to work with healthcare data and build the exact type of predictive models used to improve patient outcomes."
+          imageUrl="/ml-roc-curve.png" // ADD THIS LINE
+          imageAlt="ROC Curve for Stroke Prediction Model" // AND THIS LINE
+       />
+        <ProjectCard
+          title="Integrated Group Project: PT Connect Fitness App"
+          description="As the dedicated Web Developer in a six-person team, I was responsible for building the web application for 'PT Connect'—a management suite for personal trainers. The application featured a client dashboard, session scheduling, and analytics visualization."
+          techStack="React, JavaScript, HTML/CSS, Chart.js, Firebase"
+          relevance="Demonstrates direct, hands-on experience developing with React, the primary front-end technology used at Storm ID. It showcases my ability to work collaboratively in a team to deliver a functional web product."
+          imageUrl="/aadp-deployment-view.png" // ADD THIS LINE
+          imageAlt="Deployment View Diagram for E-Commerce System" // AND THIS LINE
         />
         <ProjectCard
-          title="Integrated Group Project: Fitness App"
-          description="Collaborated within a team to build a comprehensive fitness application. My primary role was developing the user-facing dashboard, where I gained practical experience building a modern, responsive user interface using the same front-end technology used at Storm ID."
-          techStack="React, JavaScript, Chart.js, CSS"
-          relevance="Demonstrates direct, hands-on experience with React, showing my ability to contribute to the front-end development of Storm ID's digital products and transformation projects."
-        />
-         <ProjectCard
-          title="Secure Software Development"
-          description="Analyzed software for common security vulnerabilities (e.g., SQL Injection, XSS) and implemented defensive coding practices and mitigation techniques. This project instilled a security-first mindset, essential for developing applications that handle sensitive data."
-          techStack="Python, OWASP Top 10, Static/Dynamic Analysis Tools"
-          relevance="Aligns with Storm ID's ISO 27001 certification and the high-security demands of their public sector and healthcare clients, where protecting user data is paramount."
+          title="Application Architecture & Design Patterns"
+          description="Led the design of a scalable e-commerce information management system for a premium whiskey company. The architecture incorporated multiple design patterns, including a three-tier Layered Architecture, Model-View-Controller (MVC) for the presentation layer, and an Event-Driven Architecture to handle asynchronous processes like order fulfillment and invoicing."
+          techStack="System Design, Architectural Diagrams (UML), MVC, Event-Driven Architecture"
+          relevance="This project demonstrates a strong understanding of how to design robust, scalable, and maintainable software systems—a critical skill for any engineering role at Storm ID, where building enterprise-grade platforms is key."
+          imageUrl="/ip3-mvc-diagram.png" // ADD THIS LINE
+          imageAlt="MVC Diagram for PT Connect Web and Mobile App" // AND THIS LINE       
         />
       </div>
-
     </div>
   );
 };

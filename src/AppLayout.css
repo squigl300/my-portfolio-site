@@ -22,7 +22,35 @@
 
 /* src/AppLayout.css */
 
-/* --- STYLES FOR THE PROJECTS PAGE --- */
+/* --- FIX FOR PROJECT IMAGES --- */
+.project-images {
+  display: flex;
+  flex-direction: column; /* Change to a vertical stack */
+  align-items: center; /* Center the images in the column */
+  gap: 1.5rem; /* Add more space between them */
+  margin-top: 1.5rem;
+  background-color: #f8f9fa; /* Add a slight background tint */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.project-images img {
+  width: 100%; /* Allow image to take full width of the container */
+  max-width: 700px; /* But don't let it get excessively large on big screens */
+  height: auto; /* Maintain aspect ratio */
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.image-caption {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* --- General Project Showcase Styling --- */
 
 .main-project-showcase {
   padding: 2rem;
@@ -45,26 +73,6 @@
 .main-project-showcase ul li {
   margin-bottom: 0.5rem;
   line-height: 1.6;
-}
-
-.project-images {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.project-images img {
-  width: 50%;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-}
-
-.image-caption {
-    font-style: italic;
-    font-size: 0.9rem;
-    color: var(--secondary-text);
-    text-align: center;
-    margin-top: 0.5rem;
 }
 
 .section-divider {
