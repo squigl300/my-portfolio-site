@@ -22,17 +22,17 @@ export const projects: Project[] = [
   /* ---- Honours / featured ---- */
   {
     slug: 'llm-personality-chatbot',
-    title: 'LLM Personality Chatbot',
-    tagline: 'Multi-personality AI assistant with context-aware responses',
+    title: 'Cognitive Personality Analysis Chatbot',
+    tagline: 'Conversational MBTI assessment powered by a locally-served, fine-tuned 7-B LLM',
     year: '2024',
-    metrics: '94 % user-satisfaction in pilot study',
-    tech: ['Python', 'LangChain', 'Mistral-7B', 'FastAPI', 'Streamlit'],
+    metrics: 'Grounded answers via RAG vector search',
+    tech: ['Python', 'LangChain', 'RAG', 'FAISS', 'Sentence-Transformers', 'Mistral-7B', 'FastAPI', 'Streamlit'],
     hero: '/images/projects/Hon.png',
     images: [
       '/images/projects/Hon.png',
       'images/projects/Component.png'
     ],
-    links: { pdf: '/projects/llm-chatbot-report.pdf' },
+    links: { pdf: '/projects/state.png' },
     categories: ['AI'],
     featured: true,
   },
@@ -41,65 +41,113 @@ export const projects: Project[] = [
   {
     slug: 'stroke-prediction',
     title: 'Stroke Prediction ML Model',
-    tagline: 'Random-Forest for early stroke-risk assessment',
+    tagline: 'Machine learning model for clinical stroke-risk classification',
     year: '2024',
-    metrics: 'AUC 0.83 on imbalanced test set',
-    tech: ['Python', 'Scikit-learn', 'Pandas', 'Jupyter'],
-    hero: '/images/projects/stroke-prediction.jpg',
-    images: ['/images/projects/stroke-prediction.jpg'],
+    metrics: '91% accuracy, AUC 0.83. F1-macro 0.554',
+    tech: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'Jupyter'],
+    hero: '/images/projects/ml-roc-curve.png',
+    images: [
+      '/images/projects/ml-roc-curve.png',
+      'images/projects/ml-correlation-matrix.png'
+    ],
     links: { pdf: '/projects/stroke-prediction-analysis.pdf' },
-    categories: ['AI'],
+    categories: ['Machine Learning', 'Healthcare'],
   },
 
   /* ---- AWS face match ---- */
   {
     slug: 'aws-serverless-face-match',
-    title: 'AWS Serverless Face Match',
+    title: 'AWS Serverless Face Match Analysis',
     tagline: 'Event-driven facial comparison on fully serverless stack',
     year: '2023',
-    metrics: 'p95 latency < 200 ms',
-    tech: ['Lambda', 'Rekognition', 'S3', 'DynamoDB', 'SQS', 'Python'],
-    hero: '/images/projects/aws-face-match.jpg',
-    images: ['/images/projects/aws-face-match.jpg'],
+    metrics: 'Real-time alerts | Fully automated pipeline',
+    tech: ['Lambda', 'Rekognition', 'S3', 'DynamoDB', 'SQS', 'SNS', 'CloudFormation', 'Python (Boto3)'],
+    hero: '/images/projects/CPD1.png',
+    images: [
+      '/images/projects/CPD1.png',
+      'images/projects/CPD2.png'
+    ],
     links: {},
-    categories: ['Cloud', 'AI'],
+    categories: ['Cloud', 'AI', 'Serverless'],
   },
 
   /* ---- DevOps pipeline ---- */
-  {
-    slug: 'devops-cicd-pipeline',
-    title: 'DevOps CI/CD Pipeline',
-    tagline: 'Automated Docker → Kubernetes rollout with monitoring & rollback',
-    year: '2023',
-    metrics: '99.9 % uptime after blue-green deploys',
-    tech: ['Jenkins', 'Docker', 'Kubernetes', 'Terraform', 'AWS'],
-    hero: '/images/projects/devops-cicd.jpg',
-    images: ['/images/projects/devops-cicd.jpg'],
-    links: {
-      github: 'https://github.com/seanquigley/devops-pipeline',
-      pdf: '/projects/devops-architecture.pdf',
-    },
-    categories: ['DevOps', 'Cloud'],
+{
+  slug: 'devops-cicd-pipeline',
+  title: 'DevOps CI/CD Pipeline',
+  tagline: 'End-to-end CI/CD pipeline: Docker to Kubernetes via Jenkins & Ansible on AWS',
+  year: '2023',
+  metrics: 'Deployed Node.js app using Jenkins pipeline. Automated EC2 provisioning, Docker build, and Kubernetes rollout',
+  tech: ['Jenkins', 'Docker', 'Kubernetes', 'Ansible', 'AWS EC2'],
+  hero: '/images/projects/jenkins.png',
+  images: [
+    '/images/projects/jenkins.png',
+    '/images/projects/minikube.png',
+  ],
+  links: {
+    github: '',
+    pdf: '',
   },
+  categories: ['DevOps', 'Cloud', 'Automation'],
+},
 
   /* ---- Health-One DB ---- */
   {
     slug: 'health-one-database',
-    title: 'Health-One Database System',
-    tagline: 'Normalized patient-record schema with historical tracking',
+    title: 'Health-One Database Presentation',
+    tagline: 'End-to-end relational data model for medical claims & analytics',
     year: '2023',
-    metrics: '10 k+ patient rows · zero update anomalies',
-    tech: ['PostgreSQL', 'ER-modelling', 'Node.js', 'React'],
-    hero: '/images/projects/health-one.png',
+    metrics: '12 entities • 3NF • historical doctor–patient tracking',
+    tech: ['SQL', 'Entity-Relationship Modelling', 'Draw.io / Powerpoint'],
+    hero: '/images/projects/ERD.png',
     images: [
-      '/images/projects/health-one.png',
-      '/images/projects/ERD.png'
+      '/images/projects/ERD.png',
+      '/images/projects/health-one.png'
     ],
     links: {
-      github: 'https://github.com/seanquigley/health-one-db',
       pdf: '/projects/health-one-specification.pdf',
     },
-    categories: ['Security'],
+    categories: ['Database Design', 'Healthcare'],
+  },
+
+  /* ---- PT Connect ---- */
+{
+  slug: 'pt-connect',
+  title: 'Personal Trainer App',
+  tagline: 'Fitness-focused mobile and web app for personal trainer-client interaction',
+  year: '2024',
+  metrics: 'Full-stack app with features for workout planning, nutrition tracking, and progress analytics',
+  tech: ['Java', 'Android Studio', 'React.js', 'Firebase', 'SQLite', 'AnyChart', 'Picasso'],
+  hero: '/images/projects/IP3.png',
+  images: [
+    '/images/projects/IP3.png',
+    '/images/projects/ip3-dashboard.png'
+  ],
+  links: {
+    pdf: '/projects/IP3.pdf'
+  },
+  categories: ['Mobile', 'Web', 'Full Stack'],
+},
+
+
+  /* ---- NEW: Script Manager & Portfolio Website ---- */
+  {
+    slug: 'ahk-script-manager',
+    title: 'AutoHotKey Script Manager',
+    tagline: 'C# desktop app for script sharing with WordPress integration',
+    year: '2023',
+    metrics: '',
+    tech: ['C#', 'MySQL', 'AutoHotKey', 'WordPress', 'PHP', 'BCrypt'],
+    hero: '/images/projects/AHK2.png',
+    images: [
+    '/images/projects/AHK2.png',              // hero
+    '/images/projects/AHK1.png',         // hover/gallery
+          ],
+    links: {
+    pdf: '',
+    github: ''
+    },
+    categories: ['Desktop App', 'Web Integration'],
   },
 
   /* ---- Web-app security audit ---- */
@@ -108,28 +156,58 @@ export const projects: Project[] = [
     title: 'Web Application Security Audit',
     tagline: 'Manual penetration test of PHP messaging app',
     year: '2024',
-    metrics: '23 vulnerabilities documented',
-    tech: ['Burp Suite', 'OWASP ZAP', 'Nmap', 'Python'],
-    hero: '/images/projects/security-audit.jpg',
-    images: ['/images/projects/security-audit.jpg'],
-    links: { pdf: '/projects/security-audit-report.pdf' },
-    categories: ['Security'],
+    metrics: 'Identified 3 vulnerabilities: SQL Injection, HTML Injection, Authorization Bypass',
+    tech: ['Burp Suite', 'OWASP ZAP', 'Nmap', 'PHP', 'MySQL', 'Browser DevTools'],
+    hero: '/images/projects/SSD1.png',
+    images: [
+      '/images/projects/SSD1.png',
+      'images/projects/SSD2.png'
+    ],
+    links: { pdf: '' },
+    categories: ['Security', 'Web'],
   },
 
-  /* ---- NEW: AADP coursework ---- */
-  {
-    slug: 'aadp-architecture-design',
-    title: 'Application Architecture & Design Patterns',
-    tagline: 'Layered + event-driven design for Salinte Whiskey IMS',
-    year: '2024',
-    metrics: '9 UML/C4 diagrams · 3 pattern variants',
-    tech: ['C4 Model', 'UML', 'AWS', 'REST', 'JSON'],
-    hero: '/images/projects/aadp-context.jpg',
-    images: [
-      '/images/projects/aadp-context.jpg',   // hero
-      '/images/projects/aadp-event-flow.jpg' // hover / gallery
-    ],
-    links: { pdf: '/projects/aadp-full-report.pdf' },
-    categories: ['Cloud', 'DevOps'],
+  /* ---- UPDATED: AADP Coursework Project Card ---- */
+{
+  slug: 'salinte-whiskey-ims',
+  title: 'Salinte Whiskey Information Management',
+  tagline: 'Event-driven architecture & layered design for scalable e-commerce',
+  year: '2024',
+  metrics: '3-tier deployment, MVC & EDA proposed',
+  tech: [
+    'Layered Architecture',
+    'Event-Driven Architecture',
+    'Model-View-Controller (MVC)',   
+    'C4 Model', 
+    'UML'
+  ],
+  hero: '/images/projects/aadp-deployment-view.png',
+  images: [
+    '/images/projects/aadp-deployment-view.png',   // Hero image: Deployment View
+    '/images/projects/aadp-context-diagram.png',   // Gallery image: Context Diagram
+    
+  ],
+  links: {
+    pdf: '/projects/deployment.png',
   },
+  categories: ['Cloud Architecture', 'System Design'],
+},
+
+
+  {
+  slug: 'scala-f1-analysis',
+  title: 'Scala Formula 1 Season Analysis',
+  tagline: 'Functional programming meets sports data analytics',
+  year: '2024',
+  metrics: '6 analysis modules | 100% test coverage | Pure functional core',
+  tech: ['Scala', 'Functional Programming', 'Immutable Data', 'Higher-Order Functions', 'Try/Option', 'REPL', 'Text-based UI'],
+  hero: '/images/projects/PP2.jpeg',
+  images: [
+    '/images/projects/PP2.jpeg',
+    '/images/projects/PP1.png',
+  ],
+  links: {},
+  categories: ['Scala', 'Data Analysis'],
+},
+
 ]
