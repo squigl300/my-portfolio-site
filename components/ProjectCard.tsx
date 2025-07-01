@@ -19,11 +19,16 @@ interface ProjectCardProps {
   index: number
 }
 
-const categoryColors = {
-  AI: 'before:bg-violet-500',
-  Cloud: 'before:bg-teal-500',
-  DevOps: 'before:bg-orange-500',
-  Security: 'before:bg-red-500',
+const categoryColors: Record<string, string> = {
+  'AI/ML':      'before:bg-violet-500',
+  Cloud:        'before:bg-teal-500',
+  DevOps:       'before:bg-orange-500',
+  Security:     'before:bg-red-500',
+  Data:         'before:bg-blue-500',
+  Mobile:       'before:bg-emerald-500',
+  Desktop:      'before:bg-slate-500',
+  Database:     'before:bg-amber-500',
+  Architecture: 'before:bg-indigo-500',
 } as const
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
@@ -38,7 +43,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       <Card
         className={cn(
           'group hover:shadow-lg transition-all duration-300 relative overflow-hidden',
-          `before:absolute before:top-0 before:left-0 before:right-0 before:h-1 ${categoryColors[primaryCategory]}`
+          categoryColors[primaryCategory] ?? 'before:bg-primary'
         )}
       >
         {/* ---------- Hero + Hover image ---------- */}
@@ -51,7 +56,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               fill
               loading="lazy"
               sizes="(max-width: 1024px) 100vw, 33vw"
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className="object-contain w-full h-full transition-transform duration-300 group-hover:opacity-0"
             />
             {/* hover */}
             {project.images[1] && (
@@ -61,7 +66,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 fill
                 loading="lazy"
                 sizes="(max-width: 1024px) 100vw, 33vw"
-                className="absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"
+                className="absolute inset-0 object-contain w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"
               />
             )}
           </div>
@@ -126,9 +131,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 href={project.links.pdf}
                 target="_blank"
                 rel="noopener noreferrer"
-              >
+               >
                 <FileText className="h-4 w-4 mr-1" />
-                Report
+                {project.links.pdf.toLowerCase().endsWith('.pdf') ? 'Report' : 'Image'}
               </a>
             </Button>
           )}

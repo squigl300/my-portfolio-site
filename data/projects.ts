@@ -13,7 +13,7 @@ export interface Project {
     demo?: string
     pdf?: string
   }
-  categories: ('AI' | 'Cloud' | 'DevOps' | 'Security')[]
+  categories: string[]
   featured?: boolean
 }
 
@@ -33,7 +33,7 @@ export const projects: Project[] = [
       'images/projects/Component.png'
     ],
     links: { pdf: '/projects/state.png' },
-    categories: ['AI'],
+    categories: ['AI/ML'],
     featured: true,
   },
 
@@ -51,7 +51,7 @@ export const projects: Project[] = [
       'images/projects/ml-correlation-matrix.png'
     ],
     links: { pdf: '/projects/stroke-prediction-analysis.pdf' },
-    categories: ['Machine Learning', 'Healthcare'],
+    categories: ['AI/ML'],
   },
 
   /* ---- AWS face match ---- */
@@ -68,7 +68,7 @@ export const projects: Project[] = [
       'images/projects/CPD2.png'
     ],
     links: {},
-    categories: ['Cloud', 'AI', 'Serverless'],
+    categories: ['Cloud'],
   },
 
   /* ---- DevOps pipeline ---- */
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     github: '',
     pdf: '',
   },
-  categories: ['DevOps', 'Cloud', 'Automation'],
+  categories: ['DevOps'],
 },
 
   /* ---- Health-One DB ---- */
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     links: {
       pdf: '/projects/health-one-specification.pdf',
     },
-    categories: ['Database Design', 'Healthcare'],
+    categories: ['Database'],
   },
 
   /* ---- PT Connect ---- */
@@ -126,7 +126,7 @@ export const projects: Project[] = [
   links: {
     pdf: '/projects/IP3.pdf'
   },
-  categories: ['Mobile', 'Web', 'Full Stack'],
+  categories: ['Mobile'],
 },
 
 
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     pdf: '',
     github: ''
     },
-    categories: ['Desktop App', 'Web Integration'],
+    categories: ['Desktop'],
   },
 
   /* ---- Web-app security audit ---- */
@@ -164,7 +164,7 @@ export const projects: Project[] = [
       'images/projects/SSD2.png'
     ],
     links: { pdf: '' },
-    categories: ['Security', 'Web'],
+    categories: ['Security'],
   },
 
   /* ---- UPDATED: AADP Coursework Project Card ---- */
@@ -190,7 +190,7 @@ export const projects: Project[] = [
   links: {
     pdf: '/projects/deployment.png',
   },
-  categories: ['Cloud Architecture', 'System Design'],
+  categories: ['Architecture'],
 },
 
 
@@ -207,7 +207,7 @@ export const projects: Project[] = [
     '/images/projects/PP1.png',
   ],
   links: {},
-  categories: ['Scala', 'Data Analysis'],
+  categories: ['Data'],
 },
 
 ]

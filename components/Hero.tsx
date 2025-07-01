@@ -53,7 +53,7 @@ export function Hero() {
           {/* --- portrait --- */}
           <div className="flex justify-center lg:justify-end">
             <Image
-              src="/images/portrait.png"       
+              src="/images/profile-placeholder.JPG"       
               alt="Sean Quigley portrait"
               width={350}
               height={350}

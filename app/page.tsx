@@ -5,7 +5,6 @@ import { ProjectGrid } from '@/components/ProjectGrid'
 import { Skills } from '@/components/Skills'
 import { Certifications } from '@/components/Certifications'
 import { Reading } from '@/components/Reading'
-import { Interview } from '@/components/Interview'
 import { About } from '@/components/About'
 import { Contact } from '@/components/Contact'
 
@@ -19,7 +18,6 @@ export default function Home() {
       <Skills />
       <Certifications />
       <Reading />
-      <Interview />
       <About />
       <Contact />
     </main>
