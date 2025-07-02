@@ -26,7 +26,7 @@ export function Hero() {
             <div className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 space-y-2">
               <p>Graduate AI Engineer</p>
               <p>8 years Retail Management</p>
-              <p>Building intelligent systems that solve real-world problems</p>
+              <p>Passionate about digital transformation to build AI systems that matter.</p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

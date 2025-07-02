@@ -28,7 +28,7 @@ export function ProjectGrid() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects Portfolio</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            A collection of work spanning AI, cloud architecture, DevOps and security.
+            A collection of work spanning ML, Cloud Platform, DevOps, OOP & Functional, Database Design, Web & Mobile, Security.
           </p>
 
           <div className="flex flex-wrap justify-center gap-2 mb-8">

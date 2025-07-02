@@ -32,7 +32,7 @@ export function CurrentProject() {
             Honours Project
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A privacy-first LLM pipeline that infers MBTI traits from chat.
+             Full-stack AI engineering—from data prep and QLoRA fine-tuning to retrieval orchestration with Ollama deployment
           </p>
         </motion.div>
 
@@ -132,7 +132,7 @@ export function CurrentProject() {
                     rel="noopener noreferrer"
                   >
                     <FileText className="h-4 w-4 mr-1" />
-                    Report
+                    Sequence Diagram
                   </a>
                 </Button>
               )}

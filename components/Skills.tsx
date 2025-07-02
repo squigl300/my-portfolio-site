@@ -13,7 +13,8 @@ import {
 
 const education = [
   'BSc (Hons) Computer Science · 1st Class · Glasgow Caledonian University (2025)',
-  'HND Software Development & Emerging Technologies · Distinction (2023)',
+  'HND Software Development & Emerging Technologies (2023)',
+  'NC Art & Animation (2017)'
 ]
 
 const keyModules = [
@@ -27,7 +28,6 @@ const keyModules = [
 ]
 
 const allModules = [
-  // add / trim as you like — shown in the accordion
   'Web Application Development 2',
   'Integrated Project 3',
   'Introduction to Data Science',
@@ -37,21 +37,6 @@ const allModules = [
   'Object-Oriented Analysis & Design',
   'User-Centred Design',
   'Team Working & Project Management',
-]
-
-const competencies = [
-  // — Languages & Paradigms
-  'Python', 'TypeScript', 'Scala', 'C++', 'Java',
-  // — AI / Data
-  'Scikit-learn', 'TensorFlow', 'PyTorch', 'LangChain',
-  // — Web & Frameworks
-  'React', 'Next.js', 'FastAPI', 'Streamlit',
-  // — Cloud & DevOps
-  'AWS', 'Azure', 'Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions',
-  // — Data Stores
-  'PostgreSQL', 'MongoDB', 'DynamoDB', 'FAISS',
-  // — Tooling
-  'Git', 'CI/CD', 'Terraform', 'Ansible',
 ]
 
 /* ---------- component ---------- */
@@ -68,14 +53,14 @@ export function Skills() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Skills &amp; Qualifications
+            Qualifications
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Strong software foundation with a keen focus on AI, cloud and secure delivery.
+            Strong software foundation with a keen focus on AI & cloud - I am very drawn to systems thinking.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* ---------- Education ---------- */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -132,29 +117,6 @@ export function Skills() {
                     </ul>
                   </details>
                 )}
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          {/* ---------- Core Competencies ---------- */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <Card>
-              <CardHeader>
-                <CardTitle>Foundational Competencies</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {competencies.map((skill) => (
-                    <Badge key={skill} variant="secondary" className="text-xs">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
               </CardContent>
             </Card>
           </motion.div>

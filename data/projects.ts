@@ -98,7 +98,7 @@ export const projects: Project[] = [
     tagline: 'End-to-end relational data model for medical claims & analytics',
     year: '2023',
     metrics: '12 entities • 3NF • historical doctor–patient tracking',
-    tech: ['SQL', 'Entity-Relationship Modelling', 'Draw.io / Powerpoint'],
+    tech: ['SQL', 'Oracle', 'Entity-Relationship Modelling', 'Draw.io'],
     hero: '/images/projects/ERD.png',
     images: [
       '/images/projects/ERD.png',
@@ -179,7 +179,8 @@ export const projects: Project[] = [
     'Event-Driven Architecture',
     'Model-View-Controller (MVC)',   
     'C4 Model', 
-    'UML'
+    'UML',
+    'Figma'
   ],
   hero: '/images/projects/aadp-deployment-view.png',
   images: [
